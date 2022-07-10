@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "code . & npm run start_cra",
+    "start": "code . & sass src/assets/scss/index.scss src/assets/index.css -w & npm run start_cra",
     "start_cra": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +51,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/achicyr/react_base_structure/issues"
-  },
-  "homepage": "https://github.com/achicyr/react_base_structure#readme"
+  }
 }

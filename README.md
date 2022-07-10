@@ -12,11 +12,8 @@ Je crée ce repo pour bien-sûr accélérer le processus de démarre d'un nouvea
 
 Ce kit de démarrage contient:
 - une architecture déjà en place (un peu à la next et gatsby)
-- un fichier package.json avec des scripts pré-faits pour bootstart le projet:
-    - Les script "npm run start" suivant: 
-        - "start": "code . & npm run start_cra", où 'start_cra' correspond au npm start d'un CRA classique
-    - [package abc](): c'est un super paquet npm abc blablabla...
+- un fichier package.json avec des scripts pré-faits pour bootstart le projet
 - des submodules:
     - [sass](https://github.com/achicyr/SCSS___system7-1): avec une architecture sass 7:1, et une base de composants BEM prêt à l'emploi dans la branche 'develop', [and more](javascript:alert('créer la branche develop')
     - etc
-- Un fichier de snippets VSCode, ainsi que des extensions VSCode pour coder plus vite: 
+
