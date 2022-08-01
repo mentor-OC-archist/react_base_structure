@@ -1,7 +1,12 @@
+import { useContext } from 'react'
+import { AuthContext } from '../utils/auth'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 
 export default function Header() {
+    let { setToken, token } = useContext(AuthContext)
     return (
         <header>
             header
