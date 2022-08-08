@@ -1,7 +1,6 @@
 
 import {useEffect, useState, useContext} from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../utils/auth'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
