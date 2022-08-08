@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+const SectionStyled = styled.section`
+`
+
 
 
 export default function Header() {
@@ -16,7 +19,7 @@ export default function Header() {
     // useEffect(() => {
 	// }, [])
 	
-	return <header clasName="header">
+	return <header className="header">
 			Je suis la page d'accueil
 
             <SectionStyled className="header__secondaryMenu">

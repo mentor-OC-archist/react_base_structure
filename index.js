@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import './assets/scss/index.scss';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Menus from './pages/Menus';
-import NewMenu from './pages/NewMenu';
 import Header from './components/Header'
 // import Nav from './components/Nav'
 // import Aside from './components/Aside'
@@ -26,7 +24,7 @@ root.render(
 		<BrowserRouter>
 			<AuthProvider>
 		    <Header />
-		    <Nav />
+		    {/* <Nav /> */}
 			<MainStyled>
 				<Routes>
 					<Route path="/" element={<Home />}></Route>
@@ -38,7 +36,7 @@ root.render(
 					<Route path="*" element={<Navigate replace to="/login" />}></Route>
 				</Routes>
 			</MainStyled>
-		    <Aside />
+		    {/* <Aside /> */}
 		    <Footer />
 			</AuthProvider>
 		</BrowserRouter>

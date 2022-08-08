@@ -1,7 +1,6 @@
 
 import {useEffect, useState, useContext} from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../utils/auth'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -13,7 +12,7 @@ function Home() {
 	, {token, datas, user, setUser, setDatas} = useContext(AuthContext)
     , navigate = useNavigate()
 	, generateOutput = (contents) => {
-		let { template } = contents
+		let { template } = contents || {}
 		, contents_tmp = []
 		console.log(contents)
 
@@ -25,9 +24,9 @@ function Home() {
     useEffect(() => {
 		console.log(token)
         console.log("1,2, teste, test, 1,2, test")
-	    if(!token)navigate('/login/menu')
+	    if(token)navigate('/login')
 		else generateOutput(datas.home)
-	}, [datas])
+	}, [datas, token])
 
 	
 
