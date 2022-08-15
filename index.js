@@ -6,7 +6,7 @@ import './assets/scss/index.scss';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Header from './components/Header'
-// import Nav from './components/Nav'
+import Nav from './components/Nav'
 // import Aside from './components/Aside'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
@@ -24,7 +24,7 @@ root.render(
 		<BrowserRouter>
 			<AuthProvider>
 		    <Header />
-		    {/* <Nav /> */}
+		    <Nav />
 			<MainStyled>
 				<Routes>
 					<Route path="/" element={<Home />}></Route>

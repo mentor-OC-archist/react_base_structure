@@ -24,7 +24,7 @@ function Home() {
     useEffect(() => {
 		console.log(token)
         console.log("1,2, teste, test, 1,2, test")
-	    if(token)navigate('/login')
+	    if(token==false)navigate('/login')
 		else generateOutput(datas.home)
 	}, [datas, token])
 
