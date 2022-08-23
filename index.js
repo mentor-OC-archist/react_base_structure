@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import './assets/scss/index.scss';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Sauce from './pages/Sauce';
+import NewSauce from './pages/NewSauce';
 import Header from './components/Header'
 // import Nav from './components/Nav'
 // import Aside from './components/Aside'
@@ -27,12 +29,15 @@ root.render(
 		    {/* <Nav /> */}
 			<MainStyled>
 				<Routes>
-					<Route path="/" element={<Home />}></Route>
+					<Route path="/sauces" element={<Home />}></Route>
 					<Route path="/login" element={<Login path="login" />}></Route>
 					<Route path="/login/:back" element={<Login path="login" />}></Route>
 					<Route path="/signup" element={<Login path="signup" />}></Route>
 					<Route path="/signup/:back" element={<Login path="signup" />}></Route>
 					<Route path="/logout" element={<Login path="logout" />}></Route>
+					<Route path="/new-sauce" element={<NewSauce />}></Route>
+					<Route path="/new-sauce/:id" element={<NewSauce />}></Route>
+					<Route path="/sauce/:id" element={<Sauce />}></Route>
 					<Route path="*" element={<Navigate replace to="/login" />}></Route>
 				</Routes>
 			</MainStyled>
