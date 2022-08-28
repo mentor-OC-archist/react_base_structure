@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 const NUMBER = 0
-, getFieldset = (item, option={setForm, inner:false,trigger:false}) => { 
+, getFieldset = (item, setForm, options={inner:false,trigger:false}) => { 
     
     const allowedValues = ["text","password","number","checkbox", "radio", "color", "...à compléter..."]
     , allowedTypes  = {"name":"text"
@@ -31,11 +31,11 @@ const NUMBER = 0
 , handleSubmit = (e) => {
     e.preventDefault()
 }
-getFormArray = () => Array.from(FormData(document.forms[NUMBER]))
+, getFormArray = () => Array.from(new FormData(document.forms[NUMBER]))
 
-export default function Forms({base: [], datas:[]}) {
+export default function Forms({base = [], datas = []}) {
 
-    const [form, setForm] = useState(getForm(0))
+    const [form, setForm] = useState(getFormArray(0))
     , baseForm = base.map(item => getFieldset(setForm, item))
     
     return (

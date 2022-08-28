@@ -3,8 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import styled from 'styled-components'
 import './assets/scss/index.scss';
+import NewPost from './pages/NewPost';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Post from './pages/Post';
 import Header from './components/Header'
 import Nav from './components/Nav'
 // import Aside from './components/Aside'
@@ -33,6 +35,8 @@ root.render(
 					<Route path="/signup" element={<Login path="signup" />}></Route>
 					<Route path="/signup/:back" element={<Login path="signup" />}></Route>
 					<Route path="/logout" element={<Login path="logout" />}></Route>
+					<Route path="/newPost" element={<NewPost method={"POST"} />}></Route>
+					<Route path="/post/:id" element={<Post method={"POST"} />}></Route>
 					<Route path="*" element={<Navigate replace to="/login" />}></Route>
 				</Routes>
 			</MainStyled>

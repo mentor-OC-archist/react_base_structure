@@ -42,7 +42,7 @@ export default function Login({path}) {
             method: "POST"
             , mode: "cors"
             , headers:{"Content-type":"application/json"}
-            , body: JSON.stringify({username: document.getElementById('username').value,password: document.getElementById('password').value})
+            , body: JSON.stringify({email: document.getElementById('email').value,password: document.getElementById('password').value})
         })
             .then(res=>{
                 if(!res.ok && path == "login")doError=true
@@ -74,9 +74,9 @@ export default function Login({path}) {
     console.log(user);
     return (
         <FormStyled onSubmit={handleSubmit}>
-            <label htmlFor="username')">Pseudonyme
+            <label htmlFor="email')">Pseudonyme
             </label>
-                <input type="text" id="username" name="username" />
+                <input type="text" id="email" name="email" />
             <label htmlFor="password">Mot de passe
             </label>
                 <input type="password" id="password" name="password" />

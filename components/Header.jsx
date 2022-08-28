@@ -38,8 +38,12 @@ export default function Header() {
             <li><Link to="/">Accueil</Link></li>
         </menu>
         <SectionLogoStyled className="header__logo">
-            <img src="/logo912.png" alt="" />
-            Je suis la page d'accueil
+            <Link to="/">
+                <img src="/logo192.png" alt="" />
+                {/* <img src={process.env.PUBLIC_URL +"/logo912.png"} alt="" /> */}
+                <span>Je suis la page d'accueil</span>
+                
+            </Link>
         </SectionLogoStyled>
 
         <SectionStyled className="header__logins">
